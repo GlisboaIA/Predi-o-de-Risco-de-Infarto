@@ -1,0 +1,98 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Aplicação de Redes Bayesianas para Predição de Risco de Infarto\thanks{Identify applicable funding agency here. If none, delete this.}}
+
+\maketitle
+
+
+\section{Resultados}
+
+\justifying
+Este projeto proporcionou resultados plausíveis na captura e análise dos dados utilizando Redes Bayesianas para prever se um paciente irá ter risco de infarto e arritmia cardíaca. Toda a análise foi feita partindo de dados de um paciente, como: idade, se possui dores do peito, se há histórico familiar, se possui diabetes. O algoritmo foi capaz de prever o risco do paciente, através de aplicações de cálculos da biblioteca usadas para se trabalhar com Redes Bayesianas.
+Foram enfrentados desafios, como dificuldade em aplicar o algoritmo ao tema proposto e treinar o script para chegar próximo de valores reais de previsão. Mas, após pesquisas na internet de aplicações parecidas em diversas áreas, foi possível concluir o projeto com êxito.
+
+\subsection{Definição de Métricas de Avaliação}
+
+\justifying
+Abaixo terá os pontos que foram levados em consideração no momento de construir esse projeto. 
+
+\textbf{As métricas definidas foram:}
+\begin{itemize}
+    \item Probabilidade estimada de risco de infarto (nível alto) para diferentes perfis de pacientes.
+    \item Probabilidade estimada de arritmia cardíaca associada ao mesmo grupo de pacientes.
+    \item Relação com os fatores de risco clínicos descritos no artigo base: idade, histórico familiar, dor no peito, tabagismo, estresse e hipertensão arterial.
+    \item Capacidade preditiva do modelo probabilístico em cenários diversos, comparando perfis com maior e menor exposição aos fatores de risco.
+\end{itemize}
+
+
+\subsection{Coleta e Apresentação de Dados}  
+\justifying
+A seguir, apresentamos os resultados da inferência gerada pela rede Bayesiana implementada, com base em sete perfis distintos de pacientes simulados.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Resultados.png}
+    \caption{Resultados obtidos}
+    \label{fig:minha_imagem}
+\end{figure}
+
+
+\subsection{Interpretação dos Resultados}  
+\justifying
+\textbf{A partir da aplicação do modelo, podemos observar que:}
+\begin{itemize}
+    \item Pacientes com mais de três fatores de risco simultâneos apresentaram probabilidade de infarto maior que 50 porcento, e também alta chance de arritmia cardíaca acima de 40 porcento.
+    \item Já os pacientes com poucos fatores de risco apresentaram probabilidades baixas, com valores abaixo de 30 porcento para infarto e abaixo de 35 porcento para arritmia, o que valida o comportamento do modelo.
+    \item O modelo também mostrou sensibilidade à idade e histórico familiar, coerente com os achados do artigo base pacientes idosos e com hereditariedade apresentaram maior risco, mesmo com ausência de sintomas evidentes.
+    \item A variável dor no peito influenciou tanto o risco de infarto quanto a probabilidade de arritmia.
+\end{itemize}
+
+\subsection{Considerações Finais da Seção de Resultados}  
+\justifying
+A análise dos resultados obtidos com o modelo baseado em Redes Bayesianas demonstrou coerência com os objetivos iniciais do projeto: prever, de forma probabilística, o risco de infarto e de arritmia cardíaca em pacientes com diferentes sintomas. As previsões geradas respeitaram as hipóteses esperadas,  ou seja, quanto maior a concentração de fatores de risco (como idade elevada, histórico familiar e hipertensão), maior foi a probabilidade calculada de eventos cardíacos.
+	As métricas utilizadas permitiram comparar perfis distintos e identificar padrões de risco, validando a estrutura do modelo com base no conhecimento médico descrito no artigo base. O modelo apresentou boa capacidade de previsão, mesmo com a simplicidade da implementação.
+	Entretanto, é possível reparar limitações importantes, como a ausência de dados clínicos reais. Esses pontos podem ser melhorados em trabalhos futuros, com base em bases de dados reais e aprendizado de parâmetros diretamente dos dados.
+	Ainda assim, os resultados obtidos indicam que a aplicação de Redes Bayesianas é viável como ferramenta de apoio à decisão médica, principalmente em ambientes de triagem e atenção primária à saúde.
+
+
+\section{Objetivo da Seção de Conclusão}
+\justifying
+
+Este trabalho apresentou o desenvolvimento de um modelo probabilístico baseado em Redes Bayesianas para estimar o risco de infarto agudo do miocárdio, com extensão para prever também a probabilidade de ocorrência de arritmia cardíaca.	O modelo foi alimentado com variáveis extraídas do artigo base,  como idade, histórico familiar, tabagismo, estresse, hipertensão arterial e dor torácica e demonstrou capacidade de simular cenários realistas com diferentes combinações de fatores.Os resultados obtidos com o projeto demonstram que o algoritmo foi eficaz em prever cenários de risco através de informações fornecidas para o script, atingindo os objetivos propostos. Apesar disso, reconhece-se a limitação do número de variáveis e da ausência de dados clínicos reais, sendo este um modelo simulado. Para trabalhos futuros, propõe-se:
+
+\begin{itemize}
+    \item Alimentar a rede com dados clínicos reais ou públicos;
+    \item Avaliar a rede em um sistema real de apoio à decisão clínica.
+\end{itemize}
+
+\justifying
+A análise dos resultados obtidos com o modelo baseado em Redes Bayesianas demonstrou coerência com os objetivos iniciais do projeto: prever, de forma probabilística, o risco de infarto e de arritmia cardíaca em pacientes com diferentes sintomas. As previsões geradas respeitaram as hipóteses esperadas,  ou seja, quanto maior a concentração de fatores de risco (como idade elevada, histórico familiar e hipertensão), maior foi a probabilidade calculada de eventos cardíacos. As métricas utilizadas permitiram comparar perfis distintos e identificar padrões de risco, validando a estrutura do modelo com base no conhecimento médico descrito no artigo base. O modelo apresentou boa capacidade de previsão, mesmo com a simplicidade da implementação. Entretanto, é possível reparar limitações importantes, como a ausência de dados clínicos reais. Esses pontos podem ser melhorados em trabalhos futuros, com base em bases de dados reais e aprendizado de parâmetros diretamente dos dados.	Ainda assim, os resultados obtidos indicam que a aplicação de Redes Bayesianas é viável como ferramenta de apoio à decisão médica, principalmente em ambientes de triagem e atenção primária à saúde.
+
+
+\begin{thebibliography}{00}
+\bibitem{b1}SILVA, K. S. C.; DUPRAT, I. P.; DÓREA, S. de A.; DE MELO, G. C.; DE MACÊDO, A. C. Emergência cardiológica: principais fatores de risco para infarto agudo do miocárdio / Cardiologic emergency: main risk factors for acute myocardial infarction. Brazilian Journal of Health Review, [S. l.], v. 3, n. 4, p. 11252–11263, 2020. DOI: 10.34119/bjhrv3n4-372. Disponível em: https://ojs.brazilianjournals.com.br/ojs/index.php/BJHR/article/view/15845. Acesso em: 3 may. 2025.
+
+\bibitem{b1}SOUSA, Roney Nogueira de; BRITO, Rhyan Ximenes de. Técnicas de Inteligência Computacional Como Mecanismo Auxiliador na Triagem da Possibilidade de Ataque Cardíaco em Adultos. In: ENCONTRO UNIFICADO DE COMPUTAÇÃO DO PIAUÍ (ENUCOMPI), 14. , 2021, Picos. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2021 . p. 89-96. DOI: https://doi.org/10.5753/enucompi.2021.17758.
+
+
+\bibitem{b1}CARVALHO, L. M. F. de; VIVIAN, P. A. F.; SILVA, Y. M.; PORTELA, S. N.; ZANATTA, C. M.; SOUZA, J. L. dos S. de. EDUCAÇÃO EM SAÚDE UTILIZANDO REDES BAYESIANAS PARA AVALIAÇÃO DO RISCO DE DIABETES MELLITUS TIPO 2 E HIPERTENSÃO ARTERIAL SISTÊMICA. Revista Contemporânea, [S. l.], v. 4, n. 12, p. e7067, 2024. DOI: 10.56083/RCV4N12-226. Disponível em: https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/7067. Acesso em: 17 maio. 2025.
+
+
+\end{thebibliography}
+\vspace{12pt}
+\color{red}
+\end{document}
